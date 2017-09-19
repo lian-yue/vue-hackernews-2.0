@@ -21,7 +21,7 @@ module.exports = merge(base, {
   // https://github.com/liady/webpack-node-externals
   externals: nodeExternals({
     // do not externalize CSS files in case we need to import it from a dep
-    whitelist: /\.css$/
+    whitelist: [/\.css$/, /^vue-upload-component\/src/]
   }),
   plugins: [
     new webpack.DefinePlugin({
